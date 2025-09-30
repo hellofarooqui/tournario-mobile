@@ -87,6 +87,7 @@ export const appColors = {
   darkNavy: '#0A1628',
   navy: '#1A2942',
   lightNavy: '#2A3D5C',
+   lightNavy2: '#23334dff',
   
   // Primary actions
   electricBlue: '#2B7FFF',
