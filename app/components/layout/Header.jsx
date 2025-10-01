@@ -20,6 +20,7 @@ export default Header
 
 const styles = StyleSheet.create({
     headerContainer: {
+      backgroundColor:appColors.electricBlue,
         padding:'8px',
         height:64,
         borderBottomWidth:1,

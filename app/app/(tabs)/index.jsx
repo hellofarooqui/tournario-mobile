@@ -5,6 +5,8 @@ import { appColors } from '../../styles/colors'
 import Header from '../../components/layout/Header'
 import InputWithHandleChange from '../../components/ui/InputWithHandleChange'
 import GameCategories from '../../components/features/home/GameCategories'
+import TournamentsList from '../../components/features/home/TournamentsList'
+
 
 const Home = () => {
     return (
@@ -15,6 +17,7 @@ const Home = () => {
                 <View style={styles.screenContent}>
                     <InputWithHandleChange />
                     <GameCategories/>
+                    <TournamentsList/>
                 </View>
 
             </View>
