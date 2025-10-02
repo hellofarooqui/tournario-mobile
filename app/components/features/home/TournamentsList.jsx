@@ -6,7 +6,7 @@ import {
   FlatList,
 } from "react-native";
 import React from "react";
-import TournamentList from "./../../../assets/data/TournamentListData";
+import {TournamentList} from "./../../../assets/data/TournamentListData";
 import TournamentCard from "./TournamentCard";
 import { appColors } from "../../../styles/colors";
 import { Ionicons } from "@expo/vector-icons";
@@ -14,7 +14,8 @@ import { Ionicons } from "@expo/vector-icons";
 const TournamentsList = () => {
 
 
-  const renderItem = (item) => {
+  const renderItem = ({item}) => {
+    console.log(item)
     return (<TournamentCard tournament={item} />);
   };
   return (
@@ -22,16 +23,12 @@ const TournamentsList = () => {
       <View style={styles.titleContainer}>
         <Text style={styles.titleStyle}>Tournaments</Text>
         <TouchableOpacity style={styles.titleButton}>
-          <Text style={styles.titButtonText}>Live</Text>
-          <Ionicons name="chevron-down" size={16} color={appColors.lightGray} />
+          <Text style={styles.titleButtonText}>Live</Text>
+          <Ionicons name="chevron-down" size={16} color={appColors.text_white_600} />
         </TouchableOpacity>
       </View>
       <View style={styles.cardsContainer}>
-        <FlatList
-          data={TournamentList}
-          keyExtractor={(item) =>( item._id)}
-          renderItem={renderItem}
-        />
+       {TournamentList.map(tournament => <TournamentCard key={tournament._id} tournament={tournament}/>)}
       </View>
     </View>
   );
@@ -48,14 +45,15 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
+    marginBottom:8
   },
   titleStyle: {
     fontSize: 16,
-    color: appColors.white,
+    color: appColors.text_white_800,
     fontWeight: "bold",
   },
   titleButton: {
-    backgroundColor: appColors.lightNavy2,
+    backgroundColor: appColors.bg_gray_900,
     paddingHorizontal: 12,
     paddingVertical: 6,
     borderRadius: 5,
@@ -63,8 +61,8 @@ const styles = StyleSheet.create({
     columnGap: 8,
     alignItems: "center",
   },
-  titButtonText: {
-    color: appColors.white,
+  titleButtonText: {
+    color: appColors.text_white_600,
   },
   cardsContainer: {},
   cardStyle: {},

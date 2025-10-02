@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, ScrollView } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { appColors } from '../../styles/colors'
@@ -10,8 +10,8 @@ import TournamentsList from '../../components/features/home/TournamentsList'
 
 const Home = () => {
     return (
-        <SafeAreaView style={styles.safeContainer}>
-            <View style={styles.screenContainer}>
+        <View style={styles.safeContainer}>
+            <ScrollView style={styles.screenContainer}>
                 <Header title="Tournario" leftButtonAction={() => { }} leftButtonIcon='' rightButtonIcon='' rightButtonAction={() => { }} />
 
                 <View style={styles.screenContent}>
@@ -20,9 +20,9 @@ const Home = () => {
                     <TournamentsList/>
                 </View>
 
-            </View>
+            </ScrollView>
 
-        </SafeAreaView>
+        </View>
     )
 }
 
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'column',
         flex: 1,
-        backgroundColor: appColors.darkNavy
+        backgroundColor: appColors.bg_navy_900
     },
     screenContainer: {
         padding: 0

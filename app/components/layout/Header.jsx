@@ -20,11 +20,11 @@ export default Header
 
 const styles = StyleSheet.create({
     headerContainer: {
-      backgroundColor:appColors.electricBlue,
-        padding:'8px',
-        height:64,
+      backgroundColor:appColors.bg_blue_100,
+        padding:0,
+        height:56,
         borderBottomWidth:1,
-        borderColor: appColors.lightNavy,
+        borderColor: appColors.bg_gray_600,
         display: 'flex',
         justifyContent:'center',
         alignItems:'center'
@@ -38,8 +38,8 @@ const styles = StyleSheet.create({
         color:'white'
     },
     headerText:{
-        color: 'white',
-        fontSize:24,
+        color: appColors.text_white_700,
+        fontSize:20,
         fontWeight:'bold'
     }
 })

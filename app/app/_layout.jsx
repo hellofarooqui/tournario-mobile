@@ -7,7 +7,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context'
 const RootLayout = () => {
   return (
     <>
-      <StatusBar barStyle='light-content' backgroundColor='#2B7FFF' />
+      <StatusBar barStyle='light-content' backgroundColor='#091524' />
       <Stack screenOptions={{ contentStyle: {} }}>
         <Stack.Screen name='(tabs)' options={{ headerShown: false, }} />
       </Stack>

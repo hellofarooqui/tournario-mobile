@@ -34,7 +34,7 @@ export default GameCategories;
 
 const style=StyleSheet.create({
     container:{
-
+      marginVertical:6
     },
     listContainer:{
         paddingVertical: 12
@@ -42,14 +42,15 @@ const style=StyleSheet.create({
     categoryItem:{
         alignItems:'center',
         marginRight: 16,
-        rowGap: 4
+        rowGap: 8
     },
     categoryIcon:{
-        width:48,
-        height: 48,
+        width:42,
+        height: 42,
         borderRadius: 24
     },
     categoryText:{
-        color: appColors.lightGray
+        color: appColors.text_white_600,
+        fontSize: 12
     }
 })

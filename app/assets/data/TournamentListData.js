@@ -1,6 +1,7 @@
 import TournamentImage from './../images/home/TournamentImages/carrom-tournament.png'
 export const TournamentList = [
   {
+    _id:1,
     title: "MQH-CHAMPIONSHIP 01",
     date: "Jun 27 - Jun 29",
     participants: [
@@ -13,6 +14,7 @@ export const TournamentList = [
     bannerImage: TournamentImage,
   },
     {
+      _id:2,
     title: "MQH-CHAMPIONSHIP 02",
     date: "Jun 27 - Jun 29",
     participants: [
@@ -25,6 +27,7 @@ export const TournamentList = [
     bannerImage: TournamentImage,
   },
     {
+      _id:3,
     title: "MQH-CHAMPIONSHIP 03",
     date: "Jun 27 - Jun 29",
     participants: [
