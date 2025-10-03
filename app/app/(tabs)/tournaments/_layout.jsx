@@ -6,7 +6,11 @@ const TournamentsLayout = () => {
   return (
    <Stack screenOptions={{headerShown:false}}>
     <Stack.Screen name='index' />
-    <Stack.Screen name='[category]'/>
+    <Stack.Screen name='category'/>
+    <Stack.Screen name='[tournamentId]'/>
+    <Stack.Screen name='newTournament'/>
+
+
    </Stack>
   )
 }
